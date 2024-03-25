@@ -1,0 +1,528 @@
+/* =======================================================
+INDICIA
+==========================================================
+
+Website Name: zeroJuan: Front End Web Solutions
+Website URL: https://www.zerojuan.com
+Website Author: Juan Miguel Carrillo
+Author URL: zerojuan.com
+Copyright 2024. All Rights Reserved. */
+
+/* ========================================================
+INDEX
+===========================================================
+
+1.  UNIVERAL
+2.  ELEMENTS
+3.  IDS
+4.  CLASSES
+5.  MEDIA QUERIES
+6.  NOTES */
+
+
+/* ========================================================
+1. UNIVERSAL 
+=========================================================== */
+
+:root {
+  /* ------- Colors ------- */
+
+  --bg-1: rgb(255, 255, 255);
+  --bg-2: rgba(0, 0, 0, 1);
+   
+  --border-1: rgba(0, 0, 0, 1);
+  --border-2: rgba(0, 0, 0, 1);
+
+  --brand-1: rgba(255, 255, 255, 1);
+  --brand-2: rgba(0, 0, 0, 1);
+
+  --box-shadow-1: rgba(255, 255, 255, 1);
+  --box-shadow-2: rgba(0, 0, 0, 0);
+  
+  --button-1: rgba(128, 128, 128, 1);
+  --button-2: rgba(83, 83, 83, 1);
+  
+  --card-bg-1: rgba(255, 255, 255);
+  --card-bg-2: rgba(0, 0, 0, 1);
+
+  --debug-1: rgba(255, 0, 0, 1);
+  --debug-2: rgba(0, 0, 255, 1);
+  --debug-3: rgba(255, 255, 0, 1);
+
+  --form-bg-1: rgba(128, 128, 128, 1);
+  --form-bg-2: rgba(0, 0, 0, 1);
+
+  --form-border-1: rgba(128, 128, 128, 1);
+  --form-border-2: rgba(0, 0, 0, 1);
+
+  --form-button-1: rgba(0, 0, 0, 1);
+  --form-button-2: rgba(0, 0, 0, 1);
+
+  --hero-1: rgba(0, 0, 0, 1);
+  --hero-2: rgba(0, 0, 0, 0.50);
+
+  --hover-1: rgba(180, 180, 180, .5);
+  
+  --link-1: rgba(0, 0, 255, 1);
+  --link-2: rgba(255, 0, 0, 1);
+
+  /* --nav-bg-1:rgba(0, 0, 0, .15) ; */
+
+  --shadow-1: rgba(128, 128, 128, 1);
+  --shadow-2: rgba(0, 0, 0, 1);
+   
+  --text-1: rgba(31, 31, 31, 1);
+  --text-2: rgba(0, 0, 0, 0);
+
+  --text-shadow-1: rgba(255, 255, 255, 1);
+  --text-shadow-2: rgba(0, 0, 0, 0);
+
+  /* ------- Box Model ------- */
+
+  --border-width-1: 10px;
+  --border-width-2: 20px;
+  --border-width-3: 30px;
+
+  --border-radius-1: 10px;
+  --border-radius-2: 20px;
+  --border-radius-3: 30px;
+
+  --margin-1: 10px;
+  --margin-2: 20px;
+  --margin-3: 50px;
+
+  --padding-1: 2.5px;
+  --padding-2: 5px;
+  --padding-3: 10px;
+
+}
+
+/* ========================================================
+2. ELEMENTS 
+=========================================================== */
+
+* {
+  /* border: 1px dashed var(--debug-1); */
+  box-sizing: border-box;
+  font-family: Lucida, Helvetica, sans-serif;
+  margin: 0px;
+  padding: 0px;
+}
+
+a:link, a:visited {
+  color: var(--text-1);
+  text-decoration: none;
+}
+
+a:hover {
+  text-shadow: 0px 0px 5px var(--text-1); 
+}
+
+article {
+background-color: var(--bg-2);
+height: 400px;
+max-width: 400px;
+}
+
+body {
+  max-width: 800px;
+  /* margin: auto; */
+  border: 1px solid var(--text-1);
+  margin: var(--margin-3);
+  background-color: var(--bg-1);
+  color: var(--text-1);
+  padding: var(--padding-3);
+}
+
+button {
+  background-color: var(--button-1);
+  border: none;
+  border-radius: var(--border-radius-1);
+  color: var(--text-1);
+  margin: var(--margin-1);
+  padding: var(--padding-1);
+  max-width: 100px;
+  font-weight: 500;
+  text-decoration: none;
+}
+
+button:hover {
+  background-color: var(--button-2);
+  color: var(--text-1);
+  box-shadow: 0px 0px 5px var(--shadow-1);
+
+
+}
+
+footer {
+  display: flex;
+  flex-direction: row;
+  justify-content: start;
+  font-style: italic;
+  margin-top: var(--margin-1);
+}
+
+form {
+  display: flex;
+  flex-flow: column nowrap;
+  margin: auto;
+  max-width: 400px;
+}
+
+form button {
+  align-self: flex-end;
+}
+
+form input {
+  max-width: 75%;
+}
+
+form label {
+  /* padding: 5px; */
+  text-align: left;
+}
+
+form input, form textarea {
+  margin: 5px;
+  padding: 5px;
+  /* border-radius: 5px; */
+  border: 1px solid var(--form-border-1);
+}
+
+input:focus,
+textarea:focus {
+  outline: none;
+  border: 1px solid var(--form-border-2);
+  box-shadow: 0px 0px 5px var(--shadow-1);
+}
+
+form textarea {
+  height: 7em;
+}
+
+h1, h2, h3, h4 {
+  text-wrap: balance;
+}
+
+h1 {
+  padding: var(--padding-1);
+  font-size: xx-large;
+  border-bottom: solid 1px var(--text-1);
+}
+
+h2 {
+  font-size:medium ;
+  font-weight: 300;
+  padding: var(--padding-1) 0;
+
+}
+
+h3 {
+  padding: var(--padding-2) 0;
+}
+
+html {
+  margin: auto;
+  max-width: 1920px;
+}
+
+
+
+header {
+  border-bottom: solid 5px var(--text-1);
+  padding: var(--padding-1);
+}
+
+
+
+.item, .subitem {
+  /* list-style-type: none; */
+
+  padding: var(--padding-1) 0;
+  border-top: 1px solid var(--text-1);
+  /* margin: var(--margin-1) 0; */
+}
+
+ul {
+  display: flex;
+  flex-flow: column nowrap;
+}
+
+a {
+  padding: var(--padding-1) 0;
+}
+
+
+
+.content ul {
+  text-wrap: balance;
+  margin-left: var(--margin-3);
+  /* text-indent: -10px; */
+}
+
+/* .content p::before{
+  content: ;
+  content: &#x25AA;
+} */
+
+table, th, td {
+  border: 1px solid var(--border-1);
+}
+
+li {
+  list-style-type: square;
+}
+
+/* ========================================================
+3. #IDS 
+=========================================================== */
+
+
+/* ========================================================
+4. .CLASSES
+=========================================================== */
+
+.card {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-items: center;
+
+  background-color: var(--card-bg-1);
+  border: 2px solid var(--border-1);
+  border-radius: var(--border-radius-1);
+  color: var(--text-1);
+
+  height: 250px;
+  width: 250px;
+}
+
+.services {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;  font-size: x-large;
+  border-bottom: solid var(--border-width-1) var(--text-1);}
+
+.container {
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: center;
+  align-items: center;
+  height: 400px;
+ 
+}
+
+.content {
+  max-height: 0px;
+  overflow: hidden;
+  /* display: none; */
+  transition: max-height 0.3s ease-in-out;
+}
+
+.daily-serving {
+  text-align: right;
+  /* background-color: red; */
+}
+
+.debug {
+  border: 1px dashed var(--debug-2);
+  }
+
+  .info {
+    border-top: solid var(--border-width-1) var(--text-1);
+    /* background-color: red; */
+  }
+
+  .item {
+    /* opacity: 0; */
+    font-weight: 800;
+  }
+
+  .subitem {
+    text-indent: var(--margin-2);
+    /* margin-left: var(--margin-3); */
+  }
+
+  .item:hover, .subitem:hover {
+    background-color: var(--hover-1);
+  }
+/* 
+  .item:active, .subitem:active {
+    background-color: red;
+  } */
+
+ 
+
+/* ========================================================
+5. MEDIA QUERIES 
+=========================================================== */
+
+@media (prefers-color-scheme: dark) {
+
+  :root {
+  /* ------- Colors ------- */
+
+  --bg-1: rgb(66, 66, 66);
+  --bg-2: rgba(0, 0, 0, 1);
+   
+  --border-1: rgba(0, 0, 0, 1);
+  --border-2: rgba(0, 0, 0, 1);
+
+  --brand-1: rgba(255, 255, 255, 1);
+  --brand-2: rgba(0, 0, 0, 1);
+
+  --box-shadow-1: rgba(255, 255, 255, 1);
+  --box-shadow-2: rgba(0, 0, 0, 0);
+  
+  --button-1: rgba(128, 128, 128, 1);
+  --button-2: rgba(83, 83, 83, 1);
+  
+  --card-bg-1: rgba(255, 255, 255);
+  --card-bg-2: rgba(0, 0, 0, 1);
+
+  --form-bg-1: rgba(128, 128, 128, 1);
+  --form-bg-2: rgba(0, 0, 0, 1);
+
+  --form-border-1: rgba(128, 128, 128, 1);
+  --form-border-2: rgba(0, 0, 0, 1);
+
+  --form-button-1: rgba(0, 0, 0, 1);
+  --form-button-2: rgba(0, 0, 0, 1);
+  
+  --link-1: rgba(0, 0, 255, 1);
+  --link-2: rgba(255, 0, 0, 1);
+
+  --shadow-1: rgba(128, 128, 128, 1);
+  --shadow-2: rgba(0, 0, 0, 1);
+   
+  --text-1: rgb(236, 236, 236);
+  --text-2: rgb(240, 240, 240);
+
+  --text-shadow-1: rgba(255, 255, 255, 1);
+  --text-shadow-2: rgba(0, 0, 0, 0);
+  }
+
+} 
+
+/* @media screen and (max-width: 600px) {
+  body {
+    background-color: var(--debug-3);
+  }
+} */
+
+
+
+@keyframes fadeIn {
+  0% {
+    /* transform: translateY(100%); */
+    opacity: 0;
+    
+    /* animation-delay: 1s; */
+  }
+  100% {
+    /* transform: translateY(0%); */
+    opacity: 1;
+  }
+}
+
+.fade1 {
+ opacity: 0;
+  animation: fadeIn ease 1.5s;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+  animation-delay: .5s;
+}
+
+.fade2 {
+  opacity: 0;
+   animation: fadeIn ease 1.5s;
+   animation-iteration-count: 1;
+   animation-fill-mode: forwards;
+   animation-delay: 1s;
+ }
+
+ .fade3 {
+  opacity: 0;
+   animation: fadeIn ease 1.5s;
+   animation-iteration-count: 1;
+   animation-fill-mode: forwards;
+   animation-delay: 1.5s;
+ }
+
+ .fade4 {
+  opacity: 0;
+   animation: fadeIn ease 1.5s;
+   animation-iteration-count: 1;
+   animation-fill-mode: forwards;
+   animation-delay: 2s;
+ }
+
+ .fade5 {
+  opacity: 0;
+   animation: fadeIn ease 1.5s;
+   animation-iteration-count: 1;
+   animation-fill-mode: forwards;
+   animation-delay: 2.5s;
+ }
+
+ .fade6 {
+  opacity: 0;
+   animation: fadeIn ease 1.5s;
+   animation-iteration-count: 1;
+   animation-fill-mode: forwards;
+   animation-delay: 3s;
+ }
+
+/* ========================================================
+6. NOTES
+=========================================================== */
+
+/* 
+
+.flex-col {
+  display: flex;
+  flex-flow: column wrap;  
+  justify-content: center;
+  align-items: center;
+}
+
+.flex-row {
+  display: flex;
+  flex-flow: row wrap;  
+  justify-content: center;
+  align-items: center;
+}
+
+.grid-col {
+  display: grid;
+  grid-auto-flow: column;
+  gap: var(--margin-1);
+}
+
+.grid-row {
+  display: grid;
+  grid-auto-flow: column;
+  gap: var(--margin-1);
+}
+
+.hidden {
+  display: none;
+}
+
+.responsive {
+  width: auto;
+  height: 100%;
+} */
+  
+
+
+
+
+
+
+
+
+
+
+
+
